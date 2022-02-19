@@ -2,7 +2,7 @@ import React from "react";
 
 const App = () => {
     return (
-        <h1>Hola mundo</h1>
+        <h1>Hola mundo, Bienvenido al Curso Práctico de React!!</h1>
     );
 }
 
