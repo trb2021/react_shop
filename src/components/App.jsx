@@ -1,9 +1,13 @@
 import React from "react";
-import '../styles/global.css'
+import Layout from "../containers/Layout";
+import Login from "../containers/login";
+import '../styles/global.scss';
 
 const App = () => {
     return (
-        <h1>Hola mundo, Bienvenido al Curso Práctico de React!!</h1>
+        <Layout>
+            <Login />
+        </Layout>
     );
 }
 
