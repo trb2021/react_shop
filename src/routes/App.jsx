@@ -14,12 +14,16 @@ import MyAccount from "../pages/MyAccount";
 import CreateAccount from "../pages/CreateAccount";
 import Checkout from "../pages/Checkout";
 import Orders from "../pages/Orders";
+import AppContext from "../context/AppContext";
+import useInitialState from "../hooks/useInitialState";
 
 //Estilos
 import '@styles/global.scss';
 
 const App = () => {
+    const initialState = useInitialState();
     return (
+        <AppContext.Provider value={initialState}>
         <BrowserRouter>
             <Layout>
                 <Routes>
@@ -35,7 +39,8 @@ const App = () => {
                     <Route path="*" element={<NotFound/>} />
                 </Routes>
             </Layout>
-        </BrowserRouter>        
+        </BrowserRouter> 
+        </AppContext.Provider>       
     );
 }
 
